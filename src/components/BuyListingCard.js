@@ -4,9 +4,8 @@ import { Card } from 'react-bootstrap'
 import {Row} from 'react-bootstrap'
 
 
-
-function ListingCard({listing}) {
-const {price, picture_url, built, sqrft, bath, bed, laundry, addy,} = listing
+function BuyListingCard({buyListing}) {
+const {price, picture_url, built, sqrft, bath, bed, laundry, addy,} = buyListing
 
 return (
     <Row xs={1} md={4} className="g-4">
@@ -33,4 +32,4 @@ return (
   );
 }
 
-export default ListingCard
+export default BuyListingCard
