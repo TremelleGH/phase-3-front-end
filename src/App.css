@@ -37,3 +37,13 @@ body {
   height: 1000px;
   width: 1000px;
 }
+
+.rent-container{
+  height: 0px;
+}
+
+.rent-child{
+  width: 50%;
+  float: left;
+  padding: 20px
+}

@@ -5,12 +5,13 @@ import {Row} from 'react-bootstrap'
 
 
 
-function ListingCard({listing}) {
+function RentListingCard({listing}) {
 const {price, picture_url, built, sqrft, bath, bed, laundry, addy,} = listing
 
 return (
-    <Row xs={1} md={4} className="g-4">
+  <div className='rent-container'>
       {Array.from({ length: 1 }).map((_, idx) => (
+        <div className='rent-child'>
         <Col>
           <Card>
             <Card.Img variant="top" src={picture_url}/>
@@ -28,9 +29,10 @@ return (
             </Card.Body>
           </Card>
         </Col>
+        </div>
       ))}
-    </Row>
+    </div>
   );
 }
 
-export default ListingCard
+export default RentListingCard

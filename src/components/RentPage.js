@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import ListingsContainer from './ListingContainer';
+import RentListingContainer from './RentListingContainer';
 
 
 function RentPage() {
@@ -18,7 +18,7 @@ useEffect(() => {
 
   return (
     <div>
-        <ListingsContainer listings={listings}/>
+        <RentListingContainer listings={listings}/>
     </div>
   )
 }

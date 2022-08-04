@@ -16,7 +16,6 @@ function NavBarHeader() {
             <Nav.Link as={Link} to={"/buy"}>Buy</Nav.Link>
             <Nav.Link as={Link} to={"/rent"}>Rent</Nav.Link>
             <Nav.Link as={Link} to={"/createListing"}>Create Listing</Nav.Link>
-            <Nav.Link as={Link} to={"/contact"}>Contact</Nav.Link>
             <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
         </Nav>
         <Navbar.Collapse className="justify-content-end" >
