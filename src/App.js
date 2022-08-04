@@ -1,30 +1,26 @@
 import React from "react";
 import './App.css';
-import NavBarHeader from "./components/NavBarHeader";
-import Home from "./components/Home";
-import Banners from './components/Banners';
-import {Navbar, Nav, Container} from 'react-bootstrap'
+import NavBar from "./components/NavBar";
+import HomePage from "./components/HomePage";
+import BuyPage from "./components/BuyPage";
+import RentPage from "./components/RentPage";
+import ContactPage from "./components/ContactPage";
+import AboutPage from "./components/AboutPage";
+import {Routes, Route} from 'react-router-dom';
 
 
 
 function App() {
- 
   return (
     <div className="App">
-      <NavBarHeader/>
-      <h1>
-      <Home/>
-      </h1>
-      <Banners/>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Namas Casas</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#contact">Contact</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/buy" element={<BuyPage/>} />
+        <Route path="/rent" element={<RentPage/>} />
+        <Route path="/contact" element={<ContactPage/>} />
+        <Route path="/about" element={<AboutPage/>} />
+      </Routes>
     </div>
   );
 }

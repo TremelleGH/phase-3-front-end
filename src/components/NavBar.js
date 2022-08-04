@@ -1,6 +1,7 @@
 import React from 'react'
 import {Navbar, Nav, Container} from 'react-bootstrap';
 import 'boxicons';
+import {Link} from "react-router-dom"
 
 
 function NavBarHeader() {
@@ -9,16 +10,17 @@ function NavBarHeader() {
          <Navbar bg="light" variant="light">
         <Container>
         <box-icon name="building-house" type="logo"></box-icon>
-        <Navbar.Brand href="#home">Namas Casas</Navbar.Brand>
+        <Navbar.Brand as={Link} to={"/"}><h1>Namas Casas</h1></Navbar.Brand>
         <Nav className="me-auto">
-            <Nav.Link href="#buy">Buy</Nav.Link>
-            <Nav.Link href="#rent">Rent</Nav.Link>
-            <Nav.Link href="#agency">Agency Finder</Nav.Link>
-            <Nav.Link href="#favorites">Favorites</Nav.Link>
+            <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
+            <Nav.Link as={Link} to={"/buy"}>Buy</Nav.Link>
+            <Nav.Link as={Link} to={"/rent"}>Rent</Nav.Link>
+            <Nav.Link as={Link} to={"/contact"}>Contact</Nav.Link>
+            <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
         </Nav>
         <Navbar.Collapse className="justify-content-end" >
         <Navbar.Text>
-        <button><box-icon name="user-circle" type="solid"></box-icon></button>
+        <box-icon name="building-house" type="logo"></box-icon>
         </Navbar.Text>
         </Navbar.Collapse>
         </Container>

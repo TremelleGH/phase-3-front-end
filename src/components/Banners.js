@@ -1,30 +1,23 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-
+import "../stylesheets/Card.css"
+import {Link} from "react-router-dom"
+import { Nav } from 'react-bootstrap';
 
 function Banners() {
-  return (
-    <div>
-        <Row xs={1} md={2} className="g-4">
-      {Array.from({ length: 2 }).map((_, idx) => (
-        <Col>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Buy</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-    </div>
+return (
+<div>
+<div className='card-container'>
+<Card>
+<Nav.Link as={Link} to={"/buy"}>
+<Card.Img variant="top" src="https://www.thelinehotel.com/los-angeles/wp-content/uploads/sites/2/2022/04/dtla.jpg"/></Nav.Link>
+</Card>
+<Card>
+<Nav.Link as={Link} to={"/rent"}>
+<Card.Img variant="top" src="https://park.marmaranyc.com/hubfs/Blog%20Pictures/nycinjune.jpg" /></Nav.Link>
+</Card>
+</div>
+</div>
   )
 }
 
