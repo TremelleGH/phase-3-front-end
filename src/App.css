@@ -8,6 +8,32 @@
   margin: 40px;
   position: center;
   align-items: center;
+  border: black solid thin;
+  box-shadow: inset;
 }
 
+body {
+  margin: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://wallpaperaccess.com/full/686998.jpg');
+  background-size: cover;
+}
 
+.float-container{
+  padding: 20px
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px
+}
+
+.image {
+  height: 1000px;
+  width: 1000px;
+}

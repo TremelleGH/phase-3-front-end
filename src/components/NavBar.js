@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 
 function NavBarHeader() {
   return (
-    <div>
+    <div style={{position:"sticky"}}>
          <Navbar bg="light" variant="light">
         <Container>
         <box-icon name="building-house" type="logo"></box-icon>
@@ -20,9 +20,6 @@ function NavBarHeader() {
             <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
         </Nav>
         <Navbar.Collapse className="justify-content-end" >
-        <Navbar.Text>
-        <box-icon name="building-house" type="logo"></box-icon>
-        </Navbar.Text>
         </Navbar.Collapse>
         </Container>
         </Navbar>

@@ -8,16 +8,16 @@ function BuyListingCard({buyListing}) {
 const {price, picture_url, built, sqrft, bath, bed, laundry, addy,} = buyListing
 
 return (
-    <Row xs={1} md={4} className="g-4">
+  <div className='float-container'>
       {Array.from({ length: 1 }).map((_, idx) => (
-        <Col>
+        <div className='float-child'>
           <Card>
-            <Card.Img variant="top" src={picture_url}/>
+            <Card.Img className='image' variant="top" src={picture_url}/>
             <Card.Body>
               <Card.Title>{addy}</Card.Title>
               <Card.Text>
                 <ol>
-                <li>Cost Per Month : ${price}</li>
+                <li>Cost: ${price}</li>
                 <li>Year Built : {built}</li>
                 <li>Dimensions : {sqrft} square ft</li>
                 <li>Number Of Bedrooms : {bed}</li>
@@ -26,9 +26,9 @@ return (
               </Card.Text>
             </Card.Body>
           </Card>
-        </Col>
+        </div>
       ))}
-    </Row>
+    </div>
   );
 }
 

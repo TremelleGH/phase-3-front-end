@@ -15,8 +15,8 @@ useEffect(() => {
 
 
   return (
-    <div>
-      <BuyListingContainer buyListings={buyListings}/>
+    <div>     
+        <BuyListingContainer buyListings={buyListings}/>
     </div>
   )
 }
